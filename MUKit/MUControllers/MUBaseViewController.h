@@ -13,29 +13,19 @@
 @class MUSpinneredView;
 
 @interface MUBaseViewController : UIViewController
-{
-    MUSpinneredView* spinneredView;             ///< spinnered view
-    NSInteger spinneredViewShowCount;
-    BOOL isVisible;
-}
 
-@property (nonatomic, readonly) BOOL isVisible;
+- (UIBarButtonItem *)createLeftNavButton;       ///< create custom left button for navigation bar (returned object must be autoreleased!)
+- (UIBarButtonItem *)createRightNavButton;      ///< create custom right button for navigation bar (return nil by default). (returned object must be autoreleased!)
+- (UIView *)titleViewNavItem;                   ///< create custom title view for navigation bar (return nil by default)
 
-- (void) showSpinneredView;                     ///< show spinnered view above
-- (void) hideSpinneredView;                     ///< hide spinnered view
+- (void)leftNavButtonPressed:(id)aSender;      ///< action to process pressed-on-left-button event
+- (void)rightNavButtonPressed:(id)aSender;     ///< action to process pressed-on-right-button event
+- (UIImage *)backgroundImage;
 
-- (UIBarButtonItem*) createLeftNavButton;       ///< create custom left button for navigation bar (returned object must be autoreleased!)
-- (UIBarButtonItem*) createRightNavButton;      ///< create custom right button for navigation bar (return nil by default). (returned object must be autoreleased!)
-- (UIView*) titleViewNavItem;                   ///< create custom title view for navigation bar (return nil by default)
-
-- (void) leftNavButtonPressed:(id)aSender;      ///< action to process pressed-on-left-button event
-- (void) rightNavButtonPressed:(id)aSender;     ///< action to process pressed-on-right-button event
-- (UIImage*) backgraundImage;
-
-- (void) showAlertViewWithTitle:(NSString *)aTitle 
-                        message:(NSString *)aMessage 
-                       delegate:(id)aDelegate 
-              cancelButtonTitle:(NSString *)aCancelButtonTitle 
-               otherButtonTitle:(NSString *)aOtherButtonTitle;
+- (void)showAlertViewWithTitle:(NSString *)string
+                       message:(NSString *)message
+                      delegate:(void *)delegate
+             cancelButtonTitle:(NSString *)title
+              otherButtonTitle:(void *)title1;
 
 @end

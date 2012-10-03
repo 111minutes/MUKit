@@ -6,29 +6,28 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "MUToolbar.h"
 
 @protocol MUKeyboardToolbarProtocol <NSObject>
 
-- (void) didNextButtonPressd;
-- (void) didPrevButtonPressd;
-- (void) didDoneButtonPressd;
+- (void)didNextButtonPressd;
+- (void)didPrevButtonPressd;
+- (void)didDoneButtonPressd;
 
 @end
 
-@interface MUKeyboardToolbar : MUToolbar
+@interface MUKeyboardToolbar : UIToolbar
 {
     UISegmentedControl *segmentedPreviousNext;
     UIBarButtonItem *doneButton;
-    id<MUKeyboardToolbarProtocol> delegate;
+    id <MUKeyboardToolbarProtocol> delegate;
 }
 
-@property (nonatomic, retain) NSString *previousTitle;
-@property (nonatomic, retain) NSString *nextTitle;
-@property (nonatomic, assign) id<MUKeyboardToolbarProtocol> delegate;
+@property(nonatomic, retain) NSString *previousTitle;
+@property(nonatomic, retain) NSString *nextTitle;
+@property(nonatomic, assign) id <MUKeyboardToolbarProtocol> delegate;
 
-@property (nonatomic, readonly) UIBarButtonItem *doneButton;
+@property(nonatomic, readonly) UIBarButtonItem *doneButton;
 
-- (void) selectedInputFieldIndex:(NSInteger)selectInsex allCountInputFields:(NSInteger)allCountInputFields;
+- (void)selectedInputFieldIndex:(NSInteger)selectInsex allCountInputFields:(NSInteger)allCountInputFields;
 
 @end
