@@ -1,18 +1,30 @@
 /build/
 Builds
 .DS_Store
-build.output
-*.xcodeproj/project.xcworkspace/xcuserdata/*
-*.xcodeproj/xcuserdata/*
-pkg/
+
+DerivedData
 *.xcodeproj/**
 !*.xcodeproj/*.pbxproj
+!*.xcodeproj/xcshareddata/xcschemes/*.xcscheme
 
 *.xcworkspace/**
 !*.xcworkspace/*.xcworkspacedata
 
 Pods
 Podfile.lock
-.idea
+*.idea
 
-DerivedData
+# xcode noise
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# vim noise
+*~
+*.swp
+
+build
+build.output
+pkg
