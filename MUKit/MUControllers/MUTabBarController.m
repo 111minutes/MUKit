@@ -61,7 +61,6 @@
 - (void) setupControllers;
 - (void) correctForNavigationController:(UIViewController**)vc;
 - (UIBarButtonItem*) spacerBeforeTabBarButtonAtIndex:(NSUInteger)anIndex;
-- (void) disabledButtonPressed;
 - (void) updateTabArrow;
 
 @end
