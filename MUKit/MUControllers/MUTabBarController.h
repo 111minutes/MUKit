@@ -82,6 +82,8 @@ typedef enum MUTabBarControllerStyle
 - (void)configureTabBarButton:(UIButton *)aTabBarButton atIndex:(NSUInteger)anIndex;    ///< Override to customize tabBarItem
 - (CGFloat)spaceBeforeTabBarButtonAtIndex:(NSUInteger)anIndex;                         ///< Override to configure additional space
 
+- (void) disabledButtonPressed;
+
 @end
 
 @interface UIViewController (MUTabBarController)
