@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import "AFNetworking.h"
 #import "MUTargetAction.h"
 
 
