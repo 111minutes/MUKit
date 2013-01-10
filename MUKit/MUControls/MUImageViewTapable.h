@@ -10,7 +10,6 @@
 #import "AFNetworking.h"
 #import "MUTargetAction.h"
 
-
 @interface MUImageViewTapable : UIImageView
 {
     NSMutableArray* targetActions;
