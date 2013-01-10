@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UIImageView+AFNetworking.h"
+#import "AFNetworking.h"
 #import "MUTargetAction.h"
-
 
 @interface MUImageViewTapable : UIImageView
 {
